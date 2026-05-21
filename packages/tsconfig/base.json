@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "target": "ES2022",
+        "moduleResolution": "Bundler",
+        "forceConsistentCasingInFileNames": true,
+        "ignoreDeprecations": "6.0"
+    }
+}

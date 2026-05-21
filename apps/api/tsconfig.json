@@ -1,0 +1,12 @@
+{
+  "extends": "@euphrat/tsconfig/nestjs",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src",
+    "paths": {
+      "@prisma/client": ["./src/generated/prisma"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

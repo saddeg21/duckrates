@@ -1,0 +1,16 @@
+{
+    "name": "@euphrat/eslint-config",
+    "version": "0.0.1",
+    "private": true,
+    "type":"module",
+    "exports": {
+        ".":"./index.js"
+    },
+    "peerDependencies": {
+        "typescript-eslint": "^8.0.0"
+    },
+    "devDependencies": {
+        "typescript-eslint": "^8.0.0",
+        "@next/eslint-plugin-next": "^15.0.0"
+    }
+}

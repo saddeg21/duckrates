@@ -1,0 +1,23 @@
+{
+    "name": "@euphrat/content-schema",
+    "private": true,
+    "version": "0.0.1",
+    "type": "module",
+    "exports": {
+        "./editor":"./src/editor.ts",
+        "./schema":"./src/schema.ts"
+    },
+    "typesVersions": {
+        "*": {
+            "editor": ["./src/editor.ts"],
+            "schema": ["./src/schema.ts"]
+        }
+    },
+    "dependencies": {
+        "@tiptap/pm": "^2.0.0",
+        "@tiptap/starter-kit": "^2.0.0",
+        "@tiptap/extension-image": "^2.0.0",
+        "@tiptap/extension-link": "^2.0.0",
+        "@tiptap/extension-underline": "^2.0.0"
+    }
+}

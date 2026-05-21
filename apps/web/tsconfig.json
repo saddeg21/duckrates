@@ -1,0 +1,46 @@
+{
+  "extends": "@euphrat/tsconfig/nextjs",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@lib/*": [
+        "./src/lib/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@app/*": [
+        "./src/app/*"
+      ],
+      "@/store/*": [
+        "./src/store/*"
+      ],
+      "@/components/*": [
+        "./src/components/*"
+      ]
+    },
+    "allowJs": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next.config.ts",
+    "src/**/*",
+    "lib/**/*",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next"
+  ]
+}

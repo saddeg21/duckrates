@@ -1,0 +1,51 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String    @id
+  email        String    @unique
+  name         String
+  profilePic   String?   @map("profile_pic")
+  bio          String?
+  passwordHash String    @map("password_hash")
+  role         String
+  createdAt    DateTime  @default(now()) @map("created_at")
+  updatedAt    DateTime  @updatedAt @map("updated_at")
+  posts        Post[]
+  sessions     Session[]
+
+  @@map("users")
+}
+
+model Post {
+  id             String    @id
+  title          String
+  content        Json
+  status         String
+  categories     String[]  @default([])
+  coverImageKey  String?   @map("cover_image_key")
+  authorId       String    @map("author_id")
+  publishedAt    DateTime? @map("published_at")
+  createdAt      DateTime  @default(now()) @map("created_at")
+  updatedAt      DateTime  @updatedAt @map("updated_at")
+  author         User      @relation(fields: [authorId], references: [id])
+
+  @@map("posts")
+}
+
+model Session {
+  id        String   @id
+  userId    String   @map("user_id")
+  expiresAt DateTime @map("expires_at")
+  createdAt DateTime @default(now()) @map("created_at")
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}

@@ -1,0 +1,47 @@
+# --- Dependencies -----------------------------------------------------------
+node_modules/
+.pnpm-store/
+
+# --- Build output -----------------------------------------------------------
+dist/
+build/
+out/
+.next/
+.turbo/
+*.tsbuildinfo
+
+# --- Generated code (Prisma client, etc.) -----------------------------------
+**/generated/
+src/generated/
+
+# --- Local runtime artifacts ------------------------------------------------
+apps/api/uploads/
+coverage/
+*.log
+pnpm-debug.log*
+npm-debug.log*
+
+# --- Environment files (keep .env.example committed) ------------------------
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# --- Editor / OS --------------------------------------------------------------
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# --- AI / agent context (local-only) ----------------------------------------
+CLAUDE.md
+.claude/
+
+# --- Project documentation (kept local) -------------------------------------
+docs/
+
+# --- Scratch / experimental files -------------------------------------------
+deneme.*
+temp-*.txt
+post.json
+project-structure.txt
